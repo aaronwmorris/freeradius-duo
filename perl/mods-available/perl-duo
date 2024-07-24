@@ -1,0 +1,36 @@
+perl perl-duo {
+	#
+	#  The Perl script to execute on authorize, authenticate,
+	#  accounting, xlat, etc.  This is very similar to using
+	#  'rlm_exec' module, but it is persistent, and therefore
+	#  faster.
+	#
+	filename = /usr/local/freeradius_modules/freeradius_duo.pm
+
+	#
+	#  List of functions in the module to call.
+	#  Uncomment and change if you want to use function
+	#  names other than the defaults.
+	#
+	func_authenticate = authenticate
+	func_authorize = authorize
+	#func_preacct = preacct
+	#func_accounting = accounting
+	#func_checksimul = checksimul
+	#func_pre_proxy = pre_proxy
+	#func_post_proxy = post_proxy
+	#func_post_auth = post_auth
+	#func_recv_coa = recv_coa
+	#func_send_coa = send_coa
+	#func_xlat = xlat
+	#func_detach = detach
+
+	#
+	#  Uncomment the following lines if you wish
+	#  to use separate functions for Start and Stop
+	#  accounting packets. In that case, the
+	#  func_accounting function is not called.
+	#
+	#func_start_accounting = accounting_start
+	#func_stop_accounting = accounting_stop
+}

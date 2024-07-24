@@ -1,0 +1,8 @@
+# Options for the FreeRADIUS daemon.
+FREERADIUS_OPTIONS=""
+
+# Perl runs as a thread in freeradius
+# The default JSON parser for perl is not thread safe
+# Either of these modules should work
+PERL_JSON_BACKEND="Cpanel::JSON::XS"
+#PERL_JSON_BACKEND="JSON::PP"
